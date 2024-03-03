@@ -1,0 +1,6 @@
+[symlinks]
+"kitty/kitty.conf" = "/home/eduardo/.config/kitty/kitty.conf"
+"kitty/theme.conf" = "/home/eduardo/.config/kitty/theme.conf"
+zshrc = "/home/eduardo/.zshrc"
+
+[templates]

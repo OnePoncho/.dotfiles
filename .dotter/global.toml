@@ -1,0 +1,7 @@
+[desktop]
+depends = ["shell"]
+
+[shell.files]
+zshrc = "~/.zshrc"
+kitty = "~/.config/kitty"
+

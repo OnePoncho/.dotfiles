@@ -1,6 +1,21 @@
 [symlinks]
 "kitty/kitty.conf" = "/Users/Eduardo/.config/kitty/kitty.conf"
 "kitty/theme.conf" = "/Users/Eduardo/.config/kitty/theme.conf"
+"nvim/.gitignore" = "/Users/Eduardo/.config/nvim/.gitignore"
+"nvim/.neoconf.json" = "/Users/Eduardo/.config/nvim/.neoconf.json"
+"nvim/LICENSE" = "/Users/Eduardo/.config/nvim/LICENSE"
+"nvim/README.md" = "/Users/Eduardo/.config/nvim/README.md"
+"nvim/init.lua" = "/Users/Eduardo/.config/nvim/init.lua"
+"nvim/lazy-lock.json" = "/Users/Eduardo/.config/nvim/lazy-lock.json"
+"nvim/lazyvim.json" = "/Users/Eduardo/.config/nvim/lazyvim.json"
+"nvim/lua/config/autocmds.lua" = "/Users/Eduardo/.config/nvim/lua/config/autocmds.lua"
+"nvim/lua/config/keymaps.lua" = "/Users/Eduardo/.config/nvim/lua/config/keymaps.lua"
+"nvim/lua/config/lazy.lua" = "/Users/Eduardo/.config/nvim/lua/config/lazy.lua"
+"nvim/lua/config/options.lua" = "/Users/Eduardo/.config/nvim/lua/config/options.lua"
+"nvim/lua/plugins/example.lua" = "/Users/Eduardo/.config/nvim/lua/plugins/example.lua"
+"nvim/stylua.toml" = "/Users/Eduardo/.config/nvim/stylua.toml"
+"thefuck/__pycache__/settings.cpython-312.pyc" = "/Users/Eduardo/.config/thefuck/__pycache__/settings.cpython-312.pyc"
+"thefuck/settings.py" = "/Users/Eduardo/.config/thefuck/settings.py"
 zshrc = "/Users/Eduardo/.zshrc"
 
 [templates]

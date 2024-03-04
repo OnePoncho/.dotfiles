@@ -18,7 +18,8 @@ apt install -y \
 # Terminal
 apt install -y \
 	fd-find \
-	thefuck
+	thefuck \
+	ripgrep
 	
 
 

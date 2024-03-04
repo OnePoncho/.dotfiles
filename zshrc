@@ -2,6 +2,9 @@ export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="robbyrussell"
 
 
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
+
 # path
 path+=/usr/bin
 path+=$HOME/.local/share/bob/nvim-bin

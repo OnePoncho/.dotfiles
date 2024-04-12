@@ -12,7 +12,7 @@ return {
         "markdown_inline",
         "python",
         "query",
-        "tree-sitter-rust",
+        "rust",
         "regex",
         "tsx",
         "typescript",

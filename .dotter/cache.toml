@@ -1,4 +1,5 @@
 [symlinks]
+"kitty/.kitty.conf.un~" = "/Users/Eduardo/.config/kitty/.kitty.conf.un~"
 "kitty/kitty.conf" = "/Users/Eduardo/.config/kitty/kitty.conf"
 "kitty/theme.conf" = "/Users/Eduardo/.config/kitty/theme.conf"
 "nvim/.gitignore" = "/Users/Eduardo/.config/nvim/.gitignore"
@@ -12,7 +13,12 @@
 "nvim/lua/config/keymaps.lua" = "/Users/Eduardo/.config/nvim/lua/config/keymaps.lua"
 "nvim/lua/config/lazy.lua" = "/Users/Eduardo/.config/nvim/lua/config/lazy.lua"
 "nvim/lua/config/options.lua" = "/Users/Eduardo/.config/nvim/lua/config/options.lua"
+"nvim/lua/plugins/colorscheme.lua" = "/Users/Eduardo/.config/nvim/lua/plugins/colorscheme.lua"
 "nvim/lua/plugins/example.lua" = "/Users/Eduardo/.config/nvim/lua/plugins/example.lua"
+"nvim/lua/plugins/gruvbox.lua" = "/Users/Eduardo/.config/nvim/lua/plugins/gruvbox.lua"
+"nvim/lua/plugins/mason.lua" = "/Users/Eduardo/.config/nvim/lua/plugins/mason.lua"
+"nvim/lua/plugins/telescope.lua" = "/Users/Eduardo/.config/nvim/lua/plugins/telescope.lua"
+"nvim/lua/plugins/treesitter.lua" = "/Users/Eduardo/.config/nvim/lua/plugins/treesitter.lua"
 "nvim/stylua.toml" = "/Users/Eduardo/.config/nvim/stylua.toml"
 "thefuck/__pycache__/settings.cpython-312.pyc" = "/Users/Eduardo/.config/thefuck/__pycache__/settings.cpython-312.pyc"
 "thefuck/settings.py" = "/Users/Eduardo/.config/thefuck/settings.py"

@@ -1,3 +1,4 @@
+.dotter/cache.toml
 tt.*
 .tests
 doc/tags

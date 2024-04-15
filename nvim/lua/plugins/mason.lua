@@ -3,9 +3,12 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "lua-language-server",
         "stylua",
-        "pylsp",
-        "rust_analyzer",
+        "shfmt",
+        "python-lsp-server",
+        "pyright",
+        "rust-analyzer",
       },
     },
   },

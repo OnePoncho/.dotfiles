@@ -1,5 +1,5 @@
 [desktop]
-depends = ["shell", "kitty", "neovim", "thefuck"]
+depends = ["shell", "kitty", "neovim", "lazyvim", "thefuck"]
 
 [shell.files]
 zshrc = "~/.zshrc"
@@ -9,6 +9,9 @@ kitty = "~/.config/kitty"
 
 [neovim.files]
 nvim = "~/.config/nvim"
+
+[lazyvim.files]
+lazy = "~/.local/share/nvim/lazy"
 
 [thefuck.files]
 thefuck = "~/.config/thefuck"

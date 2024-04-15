@@ -2,7 +2,8 @@
 depends = ["shell", "kitty", "neovim", "thefuck"]
 
 [shell.files]
-zshrc = "~/.zshrc"
+"zsh/plugins" = "~/.oh-my-zsh/custom/plugins"
+"zsh/zshrc" = "~/.zshrc"
 
 [kitty.files]
 kitty = "~/.config/kitty"

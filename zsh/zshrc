@@ -16,10 +16,10 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-completions
-    z 
 )
+
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
-. "$HOME/.cargo/env"
 
 # fzf
 export FZF_DEFAULT_COMMAND="fd . $HOME"
@@ -29,3 +29,6 @@ export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 
 # TheFuck
 eval $(thefuck --alias)
+
+# Alias LazyGit
+alias lg="lazygit"

@@ -17,6 +17,7 @@ pacman -S --noconfirm \
 	wget \
 	neovim
 
+
 # Terminal
 pacman -S --noconfirm \
 	fd \

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # Get the 1Password signing key
  curl -sS https://downloads.1password.com/linux/keys/1password.asc | gpg --import
 

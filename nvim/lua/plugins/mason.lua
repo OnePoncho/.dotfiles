@@ -7,7 +7,7 @@ return {
         "stylua",
         "shfmt",
         "python-lsp-server",
-        "rust_analyzer",
+        "rust-analyzer",
       },
     },
   },

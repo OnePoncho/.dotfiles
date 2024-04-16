@@ -5,6 +5,7 @@ return {
       ensure_installed = {
         "lua-language-server",
         "stylua",
+        "shfmt",
         "python-lsp-server",
         "rust_analyzer",
       },

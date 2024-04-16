@@ -15,6 +15,14 @@ return {
         function()
           require("telescope.builtin").live_grep({ cwd = require("lazy.core.config").options.root })
         end,
+        desc = "Live Grep",
+      },
+      {
+        "<leader>fs",
+        function()
+          require("telescope.builtin").git_files()
+        end,
+        desc = "git files",
       },
     },
   },

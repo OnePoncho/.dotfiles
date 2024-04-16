@@ -1,4 +1,5 @@
 .dotter/cache.toml
+lazy-lock.json
 tt.*
 .tests
 doc/tags

@@ -1,14 +1,4 @@
-#!bin/bash
-
-#install yay
-cd
-pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
-#update AUR
-yay
+#!/bin/bash
 
 # Essentials
 pacman -S --noconfirm \
@@ -24,8 +14,8 @@ pacman -S --noconfirm \
 	fd \
 	thefuck \
 	ripgrep \
-  lazygit \
-  docker
+  	lazygit \
+  	docker
 
 # Configure thefuck
 fuck

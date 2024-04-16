@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 apt install -y \
 	nvim
 

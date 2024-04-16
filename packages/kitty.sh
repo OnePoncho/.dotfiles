@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # Install Kitty Terminal
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin

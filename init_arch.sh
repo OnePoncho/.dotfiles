@@ -1,6 +1,7 @@
 #!bin/bash
 
 #install yay
+cd
 pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -23,12 +24,15 @@ pacman -S --noconfirm \
 	fd \
 	thefuck \
 	ripgrep \
-  lazygit
+  lazygit \
+  docker
 
 # Configure thefuck
 fuck
 fuck
 source ~/.bashrc
+
+cd ~/.dotfiles
 
 # Make packages scripts executable
 chmod +x ./packages/*.sh
@@ -38,6 +42,7 @@ chmod +x ./packages/*.sh
 ./packages/kitty.sh
 ./packages/fzf.sh
 ./packages/rust.sh
+./packages/1password.sh
 
 # Delete zshrc and thefuck/settings.py before creating symlink
 rm /home/eduardo/.zshrc

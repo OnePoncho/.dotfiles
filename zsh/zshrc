@@ -20,6 +20,7 @@ plugins=(
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
+. "$HOME/.cargo.env"
 
 # fzf
 export FZF_DEFAULT_COMMAND="fd . $HOME"

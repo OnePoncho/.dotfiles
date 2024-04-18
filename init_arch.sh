@@ -26,9 +26,24 @@ chmod +x ./packages/*.sh
 ./packages/kitty.sh
 ./packages/fzf.sh
 ./packages/rust.sh
+./packages/cargo.sh
 ./packages/1password.sh
 
 # Delete zshrc and thefuck/settings.py before creating symlink
-rm /home/eduardo/.zshrc
-rm /home/eduardo/.config/thefuck/settings.py
+if [ test -f ~/.zshrc ]
+then
+  rm ~/.zshrc
+else
+  echo ".zshrc does not exist"
+fi
 
+if [ test -f ~/.config/thefuck/settings.py ]
+then
+  rm ~/.config/thefuck/settings.py
+else
+  echo "settings.py does not exist"
+fi
+
+
+# Change default shell to zsh
+chsh -s $(which zsh)

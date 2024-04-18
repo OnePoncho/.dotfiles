@@ -31,14 +31,14 @@ chmod +x ./packages/*.sh
 ./packages/1password.sh
 
 # Delete zshrc and thefuck/settings.py before creating symlink
-if [ test -f ~/.zshrc ]
+if test -f ~/.zshrc
 then
   rm ~/.zshrc
 else
   echo ".zshrc does not exist"
 fi
 
-if [ test -f ~/.config/thefuck/settings.py ]
+if test -f ~/.config/thefuck/settings.py
 then
   rm ~/.config/thefuck/settings.py
 else

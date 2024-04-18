@@ -4,7 +4,7 @@
 echo "Creating plugins directory"
 mkdir ./zsh/plugins
 
-if [ test -d ./zshplugins ]
+if test -d ./zshplugins
 then
   echo "Directory Created"
   echo "Cloning plugins"

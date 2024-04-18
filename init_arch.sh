@@ -47,3 +47,5 @@ fi
 
 # Change default shell to zsh
 chsh -s $(which zsh)
+
+echo "CLOSE ALL TERMINALS -> OPEN KITTY -> run 'cargo install dotter'"

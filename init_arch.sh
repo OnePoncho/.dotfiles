@@ -23,6 +23,7 @@ chmod +x ./packages/*.sh
 
 # Other
 ./packages/oh-my-zsh.sh
+./packages/zsh-plugins.sh
 ./packages/kitty.sh
 ./packages/fzf.sh
 ./packages/rust.sh

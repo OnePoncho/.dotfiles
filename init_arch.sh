@@ -1,26 +1,20 @@
 #!/bin/bash
 
 # Essentials
-pacman -S --noconfirm \
+sudo pacman -S --noconfirm \
 	zsh \
 	git \
 	curl \
 	wget \
 	neovim
 
-
 # Terminal
-pacman -S --noconfirm \
+sudo pacman -S --noconfirm \
 	fd \
 	thefuck \
 	ripgrep \
-  	lazygit \
-  	docker
-
-# Configure thefuck
-fuck
-fuck
-source ~/.bashrc
+	lazygit \
+	docker
 
 cd ~/.dotfiles
 
@@ -38,5 +32,3 @@ chmod +x ./packages/*.sh
 rm /home/eduardo/.zshrc
 rm /home/eduardo/.config/thefuck/settings.py
 
-# Run Dotter
-dotter deploy

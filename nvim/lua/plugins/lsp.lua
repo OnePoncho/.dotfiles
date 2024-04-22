@@ -21,7 +21,7 @@ return {
             },
             wgsl_analyzer = {},
             clangd = {},
-            bashls = {},
+            --bashls = {},
             lua_ls = {
               Lua = {
                 format = {
@@ -29,9 +29,9 @@ return {
                 }
               }
             },
-            jsonls = {},
+            --jsonls = {},
             pyright = {},
-            tsserver = {},
+            --tsserver = {},
             taplo = {},
           },
         },

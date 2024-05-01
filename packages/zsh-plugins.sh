@@ -2,10 +2,10 @@
 
 # Create plugins directory and clone plugin repos
 echo "Creating plugins directory"
-mkdir ./zsh/plugins & process_id=$!
+mkdir ../zsh/plugins & process_id=$!
 wait $process_id
 
-if test -d ./zsh/plugins
+if test -d ../zsh/plugins
 then
   echo "Directory Created"
   echo "Cloning plugins"

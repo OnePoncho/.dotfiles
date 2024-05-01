@@ -1,8 +1,9 @@
+#!/bin/bash
+ 
 #install yay
-cd
 pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay.git
-cd yay
+git clone https://aur.archlinux.org/yay.git ~/yay
+cd ~/yay
 makepkg -si
 
 #update AUR

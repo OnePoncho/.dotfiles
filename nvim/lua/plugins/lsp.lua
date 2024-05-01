@@ -30,7 +30,7 @@ return {
               }
             },
             --jsonls = {},
-            pyright = {},
+            --pyright = {},
             --tsserver = {},
             taplo = {},
           },

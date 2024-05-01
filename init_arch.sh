@@ -11,7 +11,6 @@ sudo pacman -S --noconfirm \
 # Terminal
 sudo pacman -S --noconfirm \
 	fd \
-	thefuck \
 	ripgrep \
 	lazygit \
 	docker
@@ -37,14 +36,6 @@ then
 else
   echo ".zshrc does not exist"
 fi
-
-if test -f ~/.config/thefuck/settings.py
-then
-  rm ~/.config/thefuck/settings.py
-else
-  echo "settings.py does not exist"
-fi
-
 
 # Change default shell to zsh
 chsh -s $(which zsh)

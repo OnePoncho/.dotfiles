@@ -28,6 +28,7 @@ chmod +x ./packages/*.sh
 ./packages/rust.sh
 ./packages/cargo.sh
 ./packages/1password.sh
+./drivers/nvidia.sh 
 
 # Delete zshrc and thefuck/settings.py before creating symlink
 if test -f ~/.zshrc

@@ -1,5 +1,5 @@
 [desktop]
-depends = ["shell", "kitty", "neovim", "thefuck"]
+depends = ["shell", "kitty", "neovim"]
 
 [shell.files]
 "zsh/plugins" = "~/.oh-my-zsh/custom/plugins"
@@ -10,6 +10,3 @@ kitty = "~/.config/kitty"
 
 [neovim.files]
 nvim = "~/.config/nvim"
-
-[thefuck.files]
-thefuck = "~/.config/thefuck"

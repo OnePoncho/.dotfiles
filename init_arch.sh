@@ -1,7 +1,9 @@
 #!/bin/bash
 
+./packages/yay.sh
+
 # Essentials
-sudo pacman -S --noconfirm \
+sudo  yay -Yg \
 	zsh \
 	git \
 	curl \
@@ -9,7 +11,7 @@ sudo pacman -S --noconfirm \
 	neovim
 
 # Terminal
-sudo pacman -S --noconfirm \
+sudo  yay -Yg \
 	fd \
 	ripgrep \
 	lazygit \
@@ -28,7 +30,9 @@ chmod +x ./packages/*.sh
 ./packages/rust.sh
 ./packages/cargo.sh
 ./packages/1password.sh
-./drivers/nvidia.sh 
+./packages/vscode.sh
+./packages/discord.sh
+./drivers/nvidia.sh
 
 # Delete zshrc and thefuck/settings.py before creating symlink
 if test -f ~/.zshrc

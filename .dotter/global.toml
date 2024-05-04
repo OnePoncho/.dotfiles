@@ -1,5 +1,5 @@
 [desktop]
-depends = ["shell", "kitty", "neovim"]
+depends = ["shell", "kitty", "neovim", "fonts"]
 
 [shell.files]
 "zsh/plugins" = "~/.oh-my-zsh/custom/plugins"
@@ -10,3 +10,6 @@ kitty = "~/.config/kitty"
 
 [neovim.files]
 nvim = "~/.config/nvim"
+
+[fonts.files]
+fonts = "~/.local/share/fonts"

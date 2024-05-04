@@ -3,7 +3,7 @@
 ./packages/yay.sh
 
 # Essentials
-sudo  yay -Yg \
+sudo  pacman -S --noconfirm \
 	zsh \
 	git \
 	curl \
@@ -11,7 +11,7 @@ sudo  yay -Yg \
 	neovim
 
 # Terminal
-sudo  yay -Yg \
+sudo  pacman -S --noconfirm \
 	fd \
 	ripgrep \
 	lazygit \
@@ -29,6 +29,7 @@ chmod +x ./packages/*.sh
 ./packages/fzf.sh
 ./packages/rust.sh
 ./packages/cargo.sh
+./packages/docker-compose.sh
 ./packages/1password.sh
 ./packages/vscode.sh
 ./packages/discord.sh

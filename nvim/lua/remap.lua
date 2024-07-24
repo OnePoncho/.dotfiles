@@ -1,6 +1,9 @@
 -- generate uuid
 vim.keymap.set("n", "<leader>u", "i\"<C-r>=system('uuidgen')[:-2]<CR>\",<Esc>")
-
+-- generate println debug for variable under cursor
+vim.keymap.set("n", '<leader>pd', 'yiwoprintln!("{:#?}", <Esc>pa);<Esc>:w<Enter>')
+-- generate println for variable under cursor
+vim.keymap.set("n", '<leader>pl', 'yiwoprintln!("{:?}", <Esc>pa);<Esc>:w<Enter>')
 -- diagnostic
 vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })

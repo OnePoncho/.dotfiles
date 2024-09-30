@@ -30,3 +30,4 @@ export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 
 # Alias LazyGit
 alias lg="lazygit"
+alias ld="lazydocker"

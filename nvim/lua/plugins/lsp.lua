@@ -30,9 +30,12 @@ return {
               }
             },
             --jsonls = {},
-            --pyright = {},
-            --tsserver = {},
+            pyright = {},
+            eslint = {},
+            denols = {},
             taplo = {},
+            html = {},
+            cssls = {}
           },
         },
         config = function(_, opts)

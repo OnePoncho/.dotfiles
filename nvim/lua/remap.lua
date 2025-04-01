@@ -1,5 +1,6 @@
 -- generate uuid
 vim.keymap.set("n", "<leader>u", "i\"<C-r>=system('uuidgen')[:-2]<CR>\",<Esc>")
+
 -- generate println debug for variable under cursor
 vim.keymap.set("n", '<leader>pd', 'yiwoprintln!("{:#?}", <Esc>pa);<Esc>:w<Enter>')
 -- generate println for variable under cursor

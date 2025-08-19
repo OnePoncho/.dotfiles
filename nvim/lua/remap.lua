@@ -18,3 +18,6 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { noremap = true })
 vim.keymap.set('n', 'n', 'nzz', { noremap = true })
 vim.keymap.set('n', '<C-i>', '<C-i>zz', { noremap = true })
 vim.keymap.set('n', '<C-o>', '<C-o>zz', { noremap = true })
+
+-- goto copy entire file contents
+vim.keymap.set("n", "<leader>cc", "ggyG")

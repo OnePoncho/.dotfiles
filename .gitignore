@@ -1,4 +1,4 @@
-*/cache.toml
+./.dotter/cache.toml
 lazy-lock.json
 tt.*
 .tests

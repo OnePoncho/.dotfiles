@@ -1,9 +1,12 @@
 [desktop]
-depends = ["shell", "kitty", "wezterm", "neovim", "fonts"]
+depends = ["shell", "ghostty", "neovim", "fonts"]
 
 [shell.files]
 "zsh/plugins" = "~/.oh-my-zsh/custom/plugins"
 "zsh/zshrc" = "~/.zshrc"
+
+[ghostty.files]
+"ghostty/config" = "~/.config/ghostty/config"
 
 [wezterm.files]
 "wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"

@@ -22,9 +22,9 @@ vim.g.mapleader = " "
 -- generate uuid
 vim.keymap.set("n", "<leader>u", "i\"<C-r>=system('uuidgen')[:-2]<CR>\",<Esc>")
 -- generate println debug for variable under cursor
-vim.keymap.set("n", '<leader>pd', 'yiwoprintln!("{:#?}", <Esc>pa);<Esc>:w<Enter>')
+vim.keymap.set("n", '<leader>pd', 'yiwoprintln!("{:#?}", <Esc>pa);<Esc>:w<CR>')
 -- generate println for variable under cursor
-vim.keymap.set("n", '<leader>pl', 'yiwoprintln!("{:?}", <Esc>pa);<Esc>:w<Enter>')
+vim.keymap.set("n", '<leader>pl', 'yiwoprintln!("{:?}", <Esc>pa);<Esc>:w<CR>')
 -- diagnostic
 vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
@@ -40,8 +40,13 @@ vim.keymap.set('n', '<C-o>', '<C-o>zz', { noremap = true })
 vim.keymap.set("n", "<leader>cc", "ggyG")
 -- format buffer with lsp
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
--- Pick files mini.pick
-vim.keymap.set("n", "<leader>ff", ":Pick files<CR>")
+-- telescope keymaps
+vim.keymap.set("n", "<leader>ff", "<CMD>Telescope find_files<CR>", { desc = "[F]ind [F]iles" })
+vim.keymap.set("n", "<leader>fh", "<CMD>Telescope find_files hidden=true no_ignore=true<CR>", { desc = "[F]ind [H]idden" })
+vim.keymap.set("n", "<leader>fg", "<CMD>Telescope live_grep_args<CR>", { desc = "[F]ind by [G]rep" })
+vim.keymap.set("n", "<leader>df", "<CMD>Telescope diagnostics<CR>", { desc = "[D]iagnostics find by [F]ile" })
+-- neotree keymaps
+vim.keymap.set("n", "\\", "<CMD>Neotree reveal left<CR>")
 
 vim.pack.add({
   { src = "https://github.com/navarasu/onedark.nvim" },
@@ -51,7 +56,13 @@ vim.pack.add({
   { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
   { src = "https://github.com/windwp/nvim-autopairs" },
   { src = "https://github.com/preservim/nerdcommenter" },
-  { src = "https://github.com/echasnovski/mini.pick" },
+  { src = "https://github.com/nvim-lua/plenary.nvim" },
+  { src = "https://github.com/nvim-telescope/telescope.nvim" },
+  { src = "https://github.com/nvim-telescope/telescope-live-grep-args.nvim" },
+  { src = "https://github.com/nvim-telescope/telescope-fzf-native.nvim" },
+  { src = "https://github.com/nvim-neo-tree/neo-tree.nvim" },
+  { src = "https://github.com/nvim-tree/nvim-web-devicons" },
+  { src = "https://github.com/MunifTanjim/nui.nvim" },
 })
 
 vim.cmd("colorscheme onedark")
@@ -68,7 +79,25 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 require "mason".setup()
 require "nvim-autopairs".setup()
-require "mini.pick".setup()
+require "neo-tree".setup({
+  event_handlers = {
+    {
+      event = "file_opened",
+      handler = function(_)
+        require("neo-tree.command").execute({ action = "close" })
+      end
+    },
+    {
+      event = "vim_buffer_enter",
+      handler = function()
+        if vim.bo.filetype == "neo-tree" then
+          vim.opt.relativenumber = true
+          vim.opt.number = true
+        end
+      end,
+    },
+  },
+})
 require "nvim-treesitter.configs".setup({
   ensure_installed = { "rust", "go", "python", "typescript", "javascript", "kotlin" },
   highlight = { enable = true }

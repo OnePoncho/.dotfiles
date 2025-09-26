@@ -38,15 +38,18 @@ vim.keymap.set('n', '<C-i>', '<C-i>zz', { noremap = true })
 vim.keymap.set('n', '<C-o>', '<C-o>zz', { noremap = true })
 --  copy entire file contents
 vim.keymap.set("n", "<leader>cc", "ggyG")
--- format buffer with lsp
-vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 -- telescope keymaps
 vim.keymap.set("n", "<leader>ff", "<CMD>Telescope find_files<CR>", { desc = "[F]ind [F]iles" })
-vim.keymap.set("n", "<leader>fh", "<CMD>Telescope find_files hidden=true no_ignore=true<CR>", { desc = "[F]ind [H]idden" })
+vim.keymap.set("n", "<leader>fh", "<CMD>Telescope find_files hidden=true no_ignore=true<CR>",
+  { desc = "[F]ind [H]idden" })
 vim.keymap.set("n", "<leader>fg", "<CMD>Telescope live_grep_args<CR>", { desc = "[F]ind by [G]rep" })
 vim.keymap.set("n", "<leader>df", "<CMD>Telescope diagnostics<CR>", { desc = "[D]iagnostics find by [F]ile" })
 -- neotree keymaps
 vim.keymap.set("n", "\\", "<CMD>Neotree reveal left<CR>")
+-- lsp actions
+vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, { desc = '[G]oto [A]ction' })
+vim.keymap.set('n', '<leader>rw', vim.lsp.buf.rename, { desc = '[R]ename [W]ord' })
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = '[G]oto [D]efinition' })
 
 vim.pack.add({
   { src = "https://github.com/navarasu/onedark.nvim" },
@@ -76,7 +79,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
 })
-
+vim.api.nvim_create_autocmd("BufWritePre", {
+  callback = function()
+    vim.lsp.buf.format()
+  end
+})
 require "mason".setup()
 require "nvim-autopairs".setup()
 require "neo-tree".setup({
@@ -120,3 +127,32 @@ require "better_escape".setup {
     },
   },
 }
+
+
+
+local function pack_clean()
+  local active_plugins = {}
+  local unused_plugins = {}
+
+  for _, plugin in ipairs(vim.pack.get()) do
+    active_plugins[plugin.spec.name] = plugin.active
+  end
+
+  for _, plugin in ipairs(vim.pack.get()) do
+    if not active_plugins[plugin.spec.name] then
+      table.insert(unused_plugins, plugin.spec.name)
+    end
+  end
+
+  if #unused_plugins == 0 then
+    print("No unused plugins.")
+    return
+  end
+
+  local choice = vim.fn.confirm("Remove unused plugins?", "&Yes\n&No", 2)
+  if choice == 1 then
+    vim.pack.del(unused_plugins)
+  end
+end
+
+--vim.keymap.set("n", "<leader>pc", pack_clean)

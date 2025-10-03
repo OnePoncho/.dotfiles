@@ -1,5 +1,5 @@
 [desktop]
-depends = ["shell", "ghostty", "neovim", "fonts"]
+depends = ["shell", "ghostty", "neovim", "fonts", "hammerspoon"]
 
 [shell.files]
 "zsh/plugins" = "~/.oh-my-zsh/custom/plugins"
@@ -8,14 +8,11 @@ depends = ["shell", "ghostty", "neovim", "fonts"]
 [ghostty.files]
 "ghostty/config" = "~/.config/ghostty/config"
 
-[wezterm.files]
-"wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
-
-[kitty.files]
-kitty = "~/.config/kitty"
-
 [neovim.files]
 nvim = "~/.config/nvim"
 
 [fonts.files]
 fonts = "~/.local/share/fonts"
+
+[hammerspoon.files]
+"hammerspoon/init.lua" = "~/.hammerspoon/init.lua"

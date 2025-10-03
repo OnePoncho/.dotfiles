@@ -6,10 +6,10 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.wrap = false
 vim.opt.termguicolors = true
-vim.opt.completeopt = "menuone,noselect"
-vim.undofile = true
+vim.opt.completeopt = "menuone,noinsert,popup"
+vim.opt.undofile = true
 vim.opt.swapfile = false
-vim.opt.backup = fasle
+vim.opt.backup = false
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
@@ -71,6 +71,7 @@ vim.pack.add({
 vim.cmd("colorscheme onedark")
 
 vim.lsp.enable({ "lua_ls", "rust_analyzer", "gopls" })
+
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
@@ -127,9 +128,6 @@ require "better_escape".setup {
     },
   },
 }
-
-
-
 local function pack_clean()
   local active_plugins = {}
   local unused_plugins = {}

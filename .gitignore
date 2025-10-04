@@ -1,4 +1,4 @@
-./.dotter/cache.toml
+zsh/plugins/*
 lazy-lock.json
 tt.*
 .tests

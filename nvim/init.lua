@@ -6,7 +6,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.wrap = false
 vim.opt.termguicolors = true
-vim.opt.completeopt = "menuone,noinsert,popup"
+vim.opt.completeopt = "menuone,noinsert"
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -107,7 +107,7 @@ require "neo-tree".setup({
   },
 })
 require "nvim-treesitter.configs".setup({
-  ensure_installed = { "rust", "go", "python", "typescript", "javascript", "kotlin" },
+  ensure_installed = { "rust", "go", "python", "typescript", "javascript", "kotlin", "bash"},
   highlight = { enable = true }
 })
 require "better_escape".setup {

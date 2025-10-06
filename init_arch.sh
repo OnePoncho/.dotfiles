@@ -25,7 +25,6 @@ chmod +x ./packages/*.sh
 # Other
 ./packages/oh-my-zsh.sh
 ./packages/zsh-plugins.sh
-./packages/kitty.sh
 ./packages/fzf.sh
 ./packages/rust.sh
 ./packages/cargo.sh
@@ -46,4 +45,4 @@ fi
 # Change default shell to zsh
 chsh -s $(which zsh)
 
-echo "CLOSE ALL TERMINALS -> OPEN KITTY -> run 'cargo install dotter'"
+echo "Complete"

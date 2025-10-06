@@ -70,21 +70,6 @@ vim.pack.add({
 
 vim.cmd("colorscheme onedark")
 
-vim.lsp.enable({ "lua_ls", "rust_analyzer", "gopls" })
-
-vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(ev)
-    local client = vim.lsp.get_client_by_id(ev.data.client_id)
-    if client:supports_method("textDocument/completion") then
-      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-    end
-  end,
-})
-vim.api.nvim_create_autocmd("BufWritePre", {
-  callback = function()
-    vim.lsp.buf.format()
-  end
-})
 require "mason".setup()
 require "nvim-autopairs".setup()
 require "neo-tree".setup({
@@ -107,7 +92,7 @@ require "neo-tree".setup({
   },
 })
 require "nvim-treesitter.configs".setup({
-  ensure_installed = { "rust", "go", "python", "typescript", "javascript", "kotlin", "bash"},
+  ensure_installed = { "rust", "go", "python", "typescript", "javascript", "kotlin", "bash" },
   highlight = { enable = true }
 })
 require "better_escape".setup {
@@ -128,6 +113,37 @@ require "better_escape".setup {
     },
   },
 }
+
+vim.lsp.enable({ "lua_ls", "rust_analyzer", "gopls" })
+vim.lsp.config("rust_analyzer", {
+  settings = {
+    ["rust_analyzer"] = {
+      procMacro = { enable = true },
+      inlayHints = {
+        bindingModeHints = { enable = true },
+        closureCaptureHints = { enable = true },
+        closureReturnTypeHints = { enable = true },
+        expressionAdjustmentHints = { enable = true }
+      }
+    }
+  }
+})
+
+vim.lsp.inlay_hint.enable(true, { 0 })
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(ev)
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if client:supports_method("textDocument/completion") then
+      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+    end
+  end,
+})
+vim.api.nvim_create_autocmd("BufWritePre", {
+  callback = function()
+    vim.lsp.buf.format()
+  end
+})
+
 local function pack_clean()
   local active_plugins = {}
   local unused_plugins = {}

@@ -52,7 +52,8 @@ vim.keymap.set('n', '<leader>rw', vim.lsp.buf.rename, { desc = '[R]ename [W]ord'
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = '[G]oto [D]efinition' })
 
 vim.pack.add({
-  { src = "https://github.com/navarasu/onedark.nvim" },
+  --{ src = "https://github.com/navarasu/onedark.nvim" },
+  { src = "https://github.com/rose-pine/neovim" },
   { src = "https://github.com/neovim/nvim-lspconfig" },
   { src = "https://github.com/mason-org/mason.nvim" },
   { src = "https://github.com/max397574/better-escape.nvim" },
@@ -68,7 +69,7 @@ vim.pack.add({
   { src = "https://github.com/MunifTanjim/nui.nvim" },
 })
 
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme rose-pine")
 
 require "mason".setup()
 require "nvim-autopairs".setup()

@@ -1,5 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="robbyrussell"
+export ZSH_CUSTOM=~/dotfiles/zsh/custom
 
 # path
 path+=/usr/bin
@@ -14,7 +15,7 @@ plugins=(
     fzf
 )
 
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+fpath+=${ZSH_CUSTOM}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 . "$HOME/.cargo/env"
 

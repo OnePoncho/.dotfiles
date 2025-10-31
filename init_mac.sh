@@ -1,21 +1,34 @@
 #!/bin/bash
 
-./packages/yay.sh
-
-# Essentials
-sudo  pacman -S --noconfirm \
+brew install \
 	zsh \
 	git \
 	curl \
 	wget \
-	neovim
-
-# Terminal
-sudo  pacman -S --noconfirm \
-	fd \
 	ripgrep \
+	docker \
 	lazygit \
-	docker
+	lazydocker \
+
+brew install --cask \
+  aerospace \
+  bitwarden \
+  db-browser-for-sqlite \
+  discord \
+  ghostty \
+  grandperspective \
+  hammerspoon \
+  iina
+ 
+brew install --cask \
+  joplin \
+  mullvad-vpn \
+  orbstack \
+  postman \
+  visual-studio-code \
+  vivaldi
+  #google-chrome \
+  #gstreamer-runtime \
 
 cd ~/.dotfiles
 
@@ -31,7 +44,7 @@ chmod +x ./packages/*.sh
 ./packages/docker-compose.sh
 ./packages/1password.sh
 ./packages/vscode.sh
-./drivers/nvidia.sh
+./packages/discord.sh
 
 # Delete zshrc and thefuck/settings.py before creating symlink
 if test -f ~/.zshrc

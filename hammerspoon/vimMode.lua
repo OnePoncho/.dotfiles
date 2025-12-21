@@ -282,9 +282,6 @@ hs.hotkey.bind({ "cmd" }, "\\", function()
   end
 end)
 
-hs.hotkey.bind({ "alt" }, "return", function() hs.application.open("ghostty") end)
-hs.hotkey.bind({ "alt" }, "v", function() hs.application.open("vivaldi") end)
-
 hs.hotkey.bind({ "ctrl" }, "h", function() sendKey({}, "left") end)
 hs.hotkey.bind({ "ctrl" }, "j", function() sendKey({}, "down") end)
 hs.hotkey.bind({ "ctrl" }, "k", function() sendKey({}, "up") end)

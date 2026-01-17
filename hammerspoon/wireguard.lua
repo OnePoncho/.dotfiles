@@ -7,9 +7,9 @@ ignoring application responses
 	--click menu item "QNAS" of menu 1 of menu bar 2 of application process "WireGuard"
 end ignoring
 
-delay 0.01
+delay 0.1
 do shell script "killall 'System Events'"
-delay 0.01
+delay 0.1
 
 tell application "System Events"
 	launch
